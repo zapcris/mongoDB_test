@@ -10,6 +10,7 @@ import pandas as pd
 import tkinter as tk
 
 
+
 # cluster = "mongodb+srv://akshayavhad89:akshay@cluster0.w9kab.mongodb.net/swarm_production?retryWrites=true&w=majority"
 # client = MongoClient(cluster)
 #
@@ -31,12 +32,14 @@ global pV_entry, seq_entry, pI_entry, pQty_entry, cName_entry, clicked, drop, pr
 orders = {}
 batch_order = {}
 orderlist = []
-
+dummylist= [ 1, 2, 3, 4, 5]
 
 def database():
     try:
         # replace username and password into your details
         cluster = "mongodb+srv://akshayavhad89:akshay@cluster0.w9kab.mongodb.net/swarm_production?retryWrites=true&w=majority"
+
+
         client = MongoClient(cluster)
         db = client.swarm_production
         # db = client.your_database_name  #other way to create database
@@ -45,14 +48,15 @@ def database():
     except errors.ConfigurationError:
         # database can be accessed only if you have active internet connection, this will prompt user the error,
         # if user is not connected to internet
+        print(errors.ConfigurationError)
         messagebox.showerror("Network Error", "No internet connection")
 
 
 def database2():
     try:
         # replace username and password into your details
-        cluster = "mongodb+srv://akshayavhad89:akshay@cluster0.w9kab.mongodb.net/swarm_production?retryWrites=true&w=majority"
-        client = MongoClient(cluster)
+        cluster = "mongodb+srv://akshayavhad89:akshay@cluster0.w9kab.mongodb.net/swarm_production?retryWrites=true&w=majority?"
+        client = MongoClient(cluster, tls=True, tlsAllowInvalidCertificates=True)
         db = client.swarm_production
         # db = client.your_database_name  #other way to create database
         collection = db.productList  # create a collection from the database
@@ -132,6 +136,7 @@ def enlist():
     except errors.ConfigurationError:
         # database can be accessed only if you have active internet connection, this will prompt user the error,
         # if user is not connected to internet
+        print(errors.ConfigurationError)
         messagebox.showerror("Network Error", "No internet connection")
 
 
@@ -253,7 +258,7 @@ clicked = StringVar(root)
 clicked.set(None)
 
 # Create Dropdown menu
-drop = tk.OptionMenu(root, clicked, *product_variants)
+drop = tk.OptionMenu(root, clicked, *dummylist)
 drop.place(x=700, y=60)
 
 # Create Label

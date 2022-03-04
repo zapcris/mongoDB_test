@@ -4,129 +4,157 @@
     <root id="1">
       <ServerVersion>5.0.6</ServerVersion>
     </root>
-    <schema id="2" parent="1" name="swarm_production"/>
-    <schema id="3" parent="1" name="admin"/>
-    <schema id="4" parent="1" name="local"/>
-    <table id="5" parent="2" name="orderlist"/>
-    <table id="6" parent="2" name="productList"/>
-    <table id="7" parent="4" name="clustermanager"/>
-    <table id="8" parent="4" name="oplog.rs"/>
-    <table id="9" parent="4" name="replset.election"/>
-    <table id="10" parent="4" name="replset.initialSyncId"/>
-    <table id="11" parent="4" name="replset.minvalid"/>
-    <table id="12" parent="4" name="replset.oplogTruncateAfterPoint"/>
-    <table id="13" parent="4" name="startup_log"/>
-    <column id="14" parent="6" name="_id">
-      <DataType>ObjectId|12s</DataType>
-      <Position>1</Position>
-    </column>
-    <column id="15" parent="6" name="name">
-      <DataType>String|12s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="16" parent="6" name="sequence">
-      <DataType>String|12s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="17" parent="8" name="lsid">
+    <schema id="2" parent="1" name="admin"/>
+    <schema id="3" parent="1" name="local"/>
+    <schema id="4" parent="1" name="swarm_production"/>
+    <table id="5" parent="3" name="clustermanager"/>
+    <table id="6" parent="3" name="oplog.rs"/>
+    <table id="7" parent="3" name="replset.election"/>
+    <table id="8" parent="3" name="replset.initialSyncId"/>
+    <table id="9" parent="3" name="replset.minvalid"/>
+    <table id="10" parent="3" name="replset.oplogTruncateAfterPoint"/>
+    <table id="11" parent="3" name="startup_log"/>
+    <table id="12" parent="4" name="orderlist"/>
+    <table id="13" parent="4" name="productList"/>
+    <column id="14" parent="6" name="lsid">
       <DataType>Object|4999544s</DataType>
       <Position>1</Position>
     </column>
-    <column id="18" parent="8" name="lsid.id">
+    <column id="15" parent="6" name="lsid.id">
       <DataType>UUID|12s</DataType>
       <Position>2</Position>
     </column>
-    <column id="19" parent="8" name="lsid.uid">
+    <column id="16" parent="6" name="lsid.uid">
       <DataType>BinData|12s</DataType>
       <Position>3</Position>
     </column>
-    <column id="20" parent="8" name="ns">
+    <column id="17" parent="6" name="ns">
       <DataType>String|12s</DataType>
       <Position>4</Position>
     </column>
-    <column id="21" parent="8" name="o">
+    <column id="18" parent="6" name="o">
       <DataType>Object|4999544s</DataType>
       <Position>5</Position>
     </column>
-    <column id="22" parent="8" name="o._id">
+    <column id="19" parent="6" name="o._id">
       <DataType>ObjectId|12s</DataType>
       <Position>6</Position>
     </column>
-    <column id="23" parent="8" name="o.create">
+    <column id="20" parent="6" name="o.create">
       <DataType>String|12s</DataType>
       <Position>7</Position>
     </column>
-    <column id="24" parent="8" name="o.idIndex">
+    <column id="21" parent="6" name="o.idIndex">
       <DataType>Object|4999544s</DataType>
       <Position>8</Position>
     </column>
-    <column id="25" parent="8" name="o.idIndex.key">
+    <column id="22" parent="6" name="o.idIndex.key">
       <DataType>Object|4999544s</DataType>
       <Position>9</Position>
     </column>
-    <column id="26" parent="8" name="o.idIndex.key._id">
+    <column id="23" parent="6" name="o.idIndex.key._id">
       <DataType>Int32|4s</DataType>
       <Position>10</Position>
     </column>
-    <column id="27" parent="8" name="o.idIndex.name">
+    <column id="24" parent="6" name="o.idIndex.name">
       <DataType>String|12s</DataType>
       <Position>11</Position>
     </column>
-    <column id="28" parent="8" name="o.idIndex.v">
+    <column id="25" parent="6" name="o.idIndex.v">
       <DataType>Int32|4s</DataType>
       <Position>12</Position>
     </column>
-    <column id="29" parent="8" name="o.mail">
+    <column id="26" parent="6" name="o.mail">
       <DataType>String|12s</DataType>
       <Position>13</Position>
     </column>
-    <column id="30" parent="8" name="o.name">
+    <column id="27" parent="6" name="o.name">
       <DataType>String|12s</DataType>
       <Position>14</Position>
     </column>
-    <column id="31" parent="8" name="op">
+    <column id="28" parent="6" name="op">
       <DataType>String|12s</DataType>
       <Position>15</Position>
     </column>
-    <column id="32" parent="8" name="prevOpTime">
+    <column id="29" parent="6" name="prevOpTime">
       <DataType>Object|4999544s</DataType>
       <Position>16</Position>
     </column>
-    <column id="33" parent="8" name="prevOpTime.t">
+    <column id="30" parent="6" name="prevOpTime.t">
       <DataType>Int64|12s</DataType>
       <Position>17</Position>
     </column>
-    <column id="34" parent="8" name="prevOpTime.ts">
+    <column id="31" parent="6" name="prevOpTime.ts">
       <DataType>BsonTimestamp|12s</DataType>
       <Position>18</Position>
     </column>
-    <column id="35" parent="8" name="stmtId">
+    <column id="32" parent="6" name="stmtId">
       <DataType>Int32|4s</DataType>
       <Position>19</Position>
     </column>
-    <column id="36" parent="8" name="t">
+    <column id="33" parent="6" name="t">
       <DataType>Int64|12s</DataType>
       <Position>20</Position>
     </column>
-    <column id="37" parent="8" name="ts">
+    <column id="34" parent="6" name="ts">
       <DataType>BsonTimestamp|12s</DataType>
       <Position>21</Position>
     </column>
-    <column id="38" parent="8" name="txnNumber">
+    <column id="35" parent="6" name="txnNumber">
       <DataType>Int64|12s</DataType>
       <Position>22</Position>
     </column>
-    <column id="39" parent="8" name="ui">
+    <column id="36" parent="6" name="ui">
       <DataType>UUID|12s</DataType>
       <Position>23</Position>
     </column>
-    <column id="40" parent="8" name="v">
+    <column id="37" parent="6" name="v">
       <DataType>Int64|12s</DataType>
       <Position>24</Position>
     </column>
-    <column id="41" parent="8" name="wall">
+    <column id="38" parent="6" name="wall">
       <DataType>ISODate|91s</DataType>
       <Position>25</Position>
+    </column>
+    <column id="39" parent="12" name="_id">
+      <DataType>ObjectId|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="40" parent="12" name="order_list">
+      <DataType>list|4999545s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="41" parent="12" name="order_list.Customer">
+      <DataType>String|12s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="42" parent="12" name="order_list.PI">
+      <DataType>String|12s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="43" parent="12" name="order_list.Qty">
+      <DataType>String|12s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="44" parent="12" name="order_list.Sequence">
+      <DataType>String|12s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="45" parent="12" name="order_no">
+      <DataType>String|12s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="46" parent="13" name="_id">
+      <DataType>ObjectId|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="47" parent="13" name="sequence">
+      <DataType>String|12s</DataType>
+      <Position>1</Position>
+    </column>
+    <column id="48" parent="13" name="name">
+      <DataType>String|12s</DataType>
+      <Position>2</Position>
     </column>
   </database-model>
 </dataSource>
