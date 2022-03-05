@@ -1,14 +1,8 @@
-from dataclasses import dataclass
-
-import pymongo
-from pymongo import MongoClient, errors
-import sys
-from tkinter import *
-from ttkbootstrap.constants import *
-from tkinter import StringVar, messagebox
-import pandas as pd
 import tkinter as tk
-
+from dataclasses import dataclass
+from tkinter import *
+from tkinter import StringVar, messagebox
+from pymongo import MongoClient, errors
 
 
 # cluster = "mongodb+srv://akshayavhad89:akshay@cluster0.w9kab.mongodb.net/swarm_production?retryWrites=true&w=majority"
